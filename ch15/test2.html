@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var btn = document.getElementById('btn');
+
+            btn.addEventListener('click', printInfo);
+        }
+
+        function printInfo(){
+            console.log('표준 이벤트 연결');
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">표준 이벤트 클릭</button>
+</body>
+</html>

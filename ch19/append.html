@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append</title>
+    <style>
+        div {
+            margin: 20px;
+            font-size: 30px;
+        }
+    </style>
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#m1").prepend("<p>prepend</p>");
+            $("#m1").append("<p>append</p>");
+            $("#m1").before("<p>before</p>");
+            $("#m1").after("<p>after</p>");
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <p>기존 요소</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selfCall</title>
+    <script>
+        function factorial(n){
+            if(n == 0){
+                document.write("호출 끝");
+            } else {
+                document.write("호출 : " + n + "<br>");
+                factorial(n-1);
+            }
+        }
+        factorial(10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

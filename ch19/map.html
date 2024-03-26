@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            // 배열
+            var flower = ["장미","개나리","할미꽃","안개꽃"];
+            
+            var newFlower = $.map(flower,function(value, index){
+                return value + "_" + index;
+            });
+
+            console.log(newFlower);
+
+            // 객체
+            var obj = {
+                food : "자장면",
+                price : 800
+            };
+
+            var newObj = $.map(obj,function(value,key){
+                return value + "_" + key;
+            });
+            
+            console.log(newObj);
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

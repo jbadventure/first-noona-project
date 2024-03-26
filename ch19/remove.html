@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove</title>
+    <style>
+        div {
+            margin: 20px;
+            font-size: 30px;
+        }
+    </style>
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            var detachDiv;
+            $("button").eq(0).click(function(){
+                $("#m1").empty(); // 하위 요소 제거
+                $("#m2").remove(); // 요소 완전히 제거
+                detachDiv = $("#m3").detach(); // 요소 분리
+            });
+
+            $("button").eq(1).click(function(){
+                $("m1").append(detachDiv);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="m1" style="background: lightblue;">
+        <span>내용1</span>
+    </div>
+    <div id="m2">
+        <span>내용2</span>
+    </div>
+    <div id="m3">
+        <span>내용3</span>
+    </div>
+    <button>삭제</button>
+    <button>detach</button>
+</body>
+</html>

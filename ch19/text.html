@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            console.log($("#m1").text());
+            $("#m1").text("과목");
+
+            $("#m2 > div").text(function(index, value){
+                return "요소 : " + value + ", 인덱스 : " + index;
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="m1">
+        타이틀
+    </div>
+    <div id="m2">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>Javascript</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+          $("#m1").mouseenter(function(){
+            $("#info").prepend("<p>mouseenter</p>");
+          });
+          $("#m1").mouseleave(function(){
+            $("#info").prepend("<p>mouseleave</p>");
+          });
+          $("#m1").mousedown(function(){
+            $("#info").prepend("<p>mousedown</p>");
+          });
+          $("#m1").mouseup(function(){
+            $("#info").prepend("<p>mouseup</p>");
+          });
+          $("#m1").mouseover(function(){
+            $("#info").prepend("<p>mouseover</p>");
+          });
+          $("#m1").mouseout(function(){
+            $("#info").prepend("<p>mouseout</p>");
+          });
+          $("#m1").mousemove(function(){
+            $("#info").prepend("<p>mousemove</p>");
+          });
+          $("#m1").hover(function(){
+            $("#info").prepend("<p>hover</p>");
+          });
+        });
+
+    </script>
+    <style>
+        #m1 {
+            height: 200px;
+            background: lightblue;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "m1"></div>
+    <div id="info"></div>
+</body>
+</html>

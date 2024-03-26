@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object1</title>
+    <script>
+        // 객체 리터럴
+        var person = {
+            name : 'oh',
+            age : 22,
+            showInfo : function(){
+                return this.name + "," + this.age;
+            }
+        };
+
+        document.write(person.name + "<br>" + person.showInfo() + "<br>");
+
+        // 객체 생성자 함수 사용
+        function Person(name, age){
+            this.name = name;
+            this.age = age;
+            this.showInfo = function(){
+                return this.name + "," + this.age;
+            }
+        }
+
+        var person2 = new Person("oh", 22);
+        document.write(person2.name + "<br>" + person2.showInfo() + "<br>");
+
+        var person3 = new Person("park jun beom", 28);
+        document.write(person3.name + "<br>" + person3.showInfo() + "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

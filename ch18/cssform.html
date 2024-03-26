@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formFilter</title>
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("input:text").css("background","lightblue");
+            $("input:password").css("background","pink");
+            $(":button").css("background","blue");
+            $("input:checked + label").css("background","yellow");
+            $("option:selected").css("background","red");
+            $("textarea:disabled").css("background","purple");
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <label>아이디 입력: </label>
+        <input type="text">
+        <label>비번 입력: </label>
+        <input type="password">
+    </div>
+    <div>
+        <button type="button">확인</button>
+    </div>
+    <div>
+        <input type="checkbox" checked="checked" id="chk">
+        <label for="chk">체크</label>
+    </div>
+    <div>
+        <select>
+            <option>옵션1</option>
+            <option selected = "selected">옵션2</option>
+            <option>옵션3</option>
+        </select>
+    </div>
+    <div>
+        <textarea cols="30" rows="10" disabled = "disabled"></textarea>
+    </div>
+</body>
+</html>

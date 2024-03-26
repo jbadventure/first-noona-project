@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var link = document.getElementById('link');
+            link.onclick = function(event){
+                alert('클릭');
+                event.preventDefault(); // 기본 이벤트 방지
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div><a id = "link" href="http://google.com">구글</a></div>
+</body>
+</html>

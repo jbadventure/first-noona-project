@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssSelector</title>
+    <link ref="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").css("border","2px solid red");
+            $(".logo").css("border","2px solid green");
+            $("div.util").css("border","2px solid blue");
+            $("#gnb").css("border","2px solid black");
+            $("#gnb ul").css("border","2px solid lightblue");
+            $("#gnb ul > li").css("border","2px solid purple");
+        });
+    </script>
+</head>
+<body>
+    <div><p>타이틀</p></div>
+    <div class="logo">로고</div>
+    <div class="util">회원가입</div>
+    <nav id="gnb">
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>
+                <ul>
+                    <li>
+                        ss
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

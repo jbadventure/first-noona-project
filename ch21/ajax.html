@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+          getAjaxData();
+        });
+
+        function getAjaxData(){
+            $.ajax({
+                type : "GET",
+                url : "./data.json",
+                dataType : "json",
+                success : function(data, status, xhr){
+                    console.log("callback success : =====================");
+                    console.log(data);
+                    console.log("status : " + status);
+                    console.log(xhr);
+                },
+                error : function(xhr, status, error){
+                    console.log("callback error : =====================");
+                    console.log("status : " + status);
+                    console.log("error : " + error);
+                    console.log(xhr);
+                },
+                complete : function(xhr, status){
+                    console.log("callback complete : =====================");
+                    console.log("status : " + status);
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

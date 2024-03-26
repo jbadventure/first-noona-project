@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object4</title>
+    <script>
+        // class 객체 정의
+        class Person {
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+            showInfo(){
+                return this.name + "," + this.age;
+            }
+
+            getName(){
+                return this.name;
+            }
+            setName(name){
+                this.name = name;
+            }
+            getAge(){
+                return this.age;
+            }
+            setAge(age){
+                this.age = age;
+            }
+        }
+
+        var person = new Person("park",28);
+        person.setAge(25);
+
+        for(var i in person){
+            document.write(i + " : " + person[i] + "<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

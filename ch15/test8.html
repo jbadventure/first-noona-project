@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var timeoutBtn = document.getElementById('timeoutBtn');
+            var clearBtn = document.getElementById('clearBtn');
+            var timeout;
+            timeoutBtn.onclick = function(){
+                timeout = setTimeout(function(){
+                    console.log('2초 뒤 실행');
+                }, 2000);
+            }
+
+            clearBtn.onclick = function(){
+                clearInterval(timeout);
+                console.log('실행 종료');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="timeoutBtn">setTimeout</button>
+    <button id="clearBtn">clearTimeout</button>
+</body>
+</html>

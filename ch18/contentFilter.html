@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("td:empty").css("background","red");
+            $("td:parent").css("background","gray");
+            $("td:contains(2)").css("background","blue");
+            $("header:has(h1)").css("background","yellow");
+            
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>타이틀</h1>
+    </header>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

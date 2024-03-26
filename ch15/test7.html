@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var intervalBtn = document.getElementById('intervalBtn');
+            var clearBtn = document.getElementById('clearBtn');
+            var interval;
+            intervalBtn.onclick = function(){
+                var i = 0;
+                interval = setInterval(function(){
+                    i++;
+                    console.log('2초 마다 실행' + i);
+                }, 2000);
+            }
+
+            clearBtn.onclick = function(){
+                clearInterval(interval);
+                console.log('실행 종료');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="intervalBtn">setInterval</button>
+    <button id="clearBtn">clearInterval</button>
+</body>
+</html>

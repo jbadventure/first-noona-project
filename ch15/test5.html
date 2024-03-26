@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parents {
+            background: lightcoral;
+            padding: 20px;
+        }
+        #child {
+            background: lightblue;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var parents = document.getElementById('parents');
+            var child = document.getElementById('child');
+            parents.onclick = function(){
+                alert('부모 이벤트');
+            }
+            child.onclick = function(event){
+                alert('자식 이벤트');
+                // 부모 이벤트도 같이 발생하는 현상 방지
+                 event.stopPropagation();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="parents">
+        <p id="child">클릭</p>
+    </div>
+</body>
+</html>

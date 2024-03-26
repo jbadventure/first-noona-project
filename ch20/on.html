@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on</title>
+    <link rel="shortcut icon" href="#">
+    <style>
+       button {
+        width: 100px;
+        margin: 10px;
+       }
+     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").on("click",function(){
+                $("#info").prepend("<p>이벤트 click 연결</p>");
+            })
+            $("#btn1").on("mouseenter mouseleave",function(){
+                $("#info").prepend("<p>이벤트 mouseenter mouseleave 연결</p>");
+            })
+
+            $("#btn1").on({
+                click : function(){
+                    $("#info").prepend("<p>이벤트 click2 연결</p>");
+                },
+                mouseenter : function(){
+                    $("#info").prepend("<p>이벤트 mouseenter2 연결</p>");
+                }
+            })
+            
+            $("#btn2").on("click", function(){
+                $("#btn1").off("click");
+            })
+
+            $("#btn3").one("click", function(){
+                $("#info").prepend("<p>이벤트 btn3 한번만 click 연결</p>");
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <button id="btn1">on 버튼</button>
+    </div>
+    <div>
+        <button id="btn2">off 버튼</button>
+    </div>
+    <div>
+        <button id="btn3">one 버튼</button>
+    </div>
+    <div id="info">
+
+    </div>
+</body>
+</html>

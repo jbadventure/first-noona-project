@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set</title>
+    <script>
+        var temp = new Set();
+        temp.add("a");
+        temp.add("b");
+        temp.add("c");
+        temp.add("a");
+
+        // 값 존재 여부 파악
+        document.write(temp.has("a") + "<br>");
+
+        for(var i of temp.values()){
+            document.write(i + "<br>");
+        }
+
+        temp.delete("b");
+        document.write("b 삭제한 후에 " + "<br>");
+        for(var i of temp.values()){
+            document.write(i + "<br>");
+        }
+        
+        temp.clear();
+        document.write("전체 삭제한 후에 " + "<br>");
+        for(var i of temp.values()){
+            document.write(i + "<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

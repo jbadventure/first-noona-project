@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 객체 Open 메소드</title>
+
+    <script>
+        window.onload = function(){
+            var btn = document.getElementById('btn');
+            btn.onclick = function(){
+                window,open('http://google.com', 'window name',
+                'width=500, height=600, left=50, top=50');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id ="btn">클릭</button>
+</body>
+</html>

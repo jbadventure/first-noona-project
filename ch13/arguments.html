@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments</title>
+    <script>
+        function examPass(name, h, c, j){
+            var comment = name + " 학생은 ";
+            if(h >= 60 && c >= 60 && j >= 60){
+                comment += " 전과목 PASS";
+            } else {
+                if(h < 60) {
+                    comment += " html 재시험";
+                } 
+                if(c < 60) {
+                    comment += " css 재시험";
+                } 
+                if(j < 60) {
+                    comment += " javascript 재시험";
+                } 
+            }
+            return comment;
+        }
+        
+        document.write(examPass("Park",80,90,90) + "<br>");
+        document.write(examPass("oh",80,50,90) + "<br>");
+
+        // arguments 배열 : 함수에 인자로 전달된 값들을 저장한 배열객체
+        function test(){
+            document.write(arguments[0] + "<br>");
+            document.write(arguments[1] + "<br>");
+        }
+
+        test("hi","Park");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

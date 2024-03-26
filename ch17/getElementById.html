@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+    <link rel="shortcut icon" href="#">
+    <script>
+        window.onload = function(){
+            // getElementById
+            var text1 = document.getElementById('text1');
+            console.log(text1);
+
+
+            // getElementsByName
+            var text2 = document.getElementsByName('text2');
+            console.log(text2);
+
+            // getElementsByTagName
+            var text3 = document.getElementsByTagName('p');
+            console.log(text3);
+
+            // querySelector 첫번째 요소만 가져옴
+            var list1 = document.querySelector("#box1 > ul > li");
+            console.log(list1);
+
+            // querySelector
+            var list2 = document.querySelectorAll("#box1 > ul > li");
+            console.log(list2);
+
+            // 선택한 요소의 속성 변경
+            list1.style.background = "#ff6600";
+            list2[1].style.background="blue";
+            list2.item(2).style.background="#ccc";
+        }
+    </script>
+</head>
+<body>
+    <div id="box1">
+        <p id="text1">hello</p>
+        <p name="text2">World</p>
+        <ul>
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+        </ul>
+    </div>
+</body>
+</html>

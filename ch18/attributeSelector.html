@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attributeSelector</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("ul[class]").css("background","red");
+            $("ul > li[class='li_1']").css("border","3px solid green");
+            $("ul > li[class='li_2']").css("border","3px solid purple");
+            $("ul > li[class='li_3']").css("background","black");
+        });
+    </script>
+</head>
+<body>
+    <ul class="list">
+        <li class="li_1">내용1</li>
+        <li class="li_2">내용2</li>
+        <li class="li_3">내용3</li>
+    </ul>
+</body>
+</html>

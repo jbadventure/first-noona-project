@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax3</title>
+    <link rel="shortcut icon" href="#">
+    <style>
+        h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border:  1px solid #ccc;
+            text-align: center; 
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+          getLoadData();
+        });
+
+        function getLoadData(){
+           $("#list1").load("./data.json",function(data, status, xhr){
+            var objArr = JSON.parse(data);
+
+            $.each(objArr, function(index, obj){
+                console.log(obj.name + "," + obj.score1);
+            })
+           });
+
+           $("#list2").load("./remote.html #m2");
+        }
+
+    </script>
+</head>
+<body>
+    <div id="list1"></div>
+    <div id="list2"></div>
+</body>
+</html>

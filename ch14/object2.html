@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object2</title>
+    <script>
+        // 객체 생성자 함수의 속셩 변경, 추가, 삭제...
+        function Person(name, age){
+            this.name = name;
+            this.age = age;
+            this.showInfo = function(){
+                return this.name + "," + this.age;
+            }
+        }
+
+        var oh = new Person("oh", 5);
+        oh.address = "서울시";
+        delete oh.age; // 속성 삭제
+        oh.showInfo = function(){
+            return this.name + "," + this.address;
+        }
+
+        document.write(oh.name + "<br>" + oh.showInfo() + "<br>");
+
+        // 동적으로 변경된 속성값들은 생성자 함수를 이용해서 생성된 또 다른 
+        // 객체에는 영향을 주지 못한다
+        var song = new Person("song", 22);
+        document.write(song.name + "<br>" + song.showInfo() + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

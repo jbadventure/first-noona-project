@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 이벤트 연결</title>
+    <script>
+        window.onload = function(){
+            var btn2 = document.getElementById('btn2');
+            btn2.onclick = function(){
+                console.log('기본 이벤트 클릭2');
+            };
+
+            var btn3 = document.getElementById('btn3');
+            btn3.onclick = printInfo
+        }
+
+        function printInfo(){
+            console.log('test');
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">기본 이벤트 클릭1</button>
+    <button id="btn2">기본 이벤트 클릭2</button>
+    <button id="btn3">기본 이벤트 클릭3</button>
+
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            console.log('기본 이벤트 클릭1');
+        }
+    </script>
+</body>
+</html>

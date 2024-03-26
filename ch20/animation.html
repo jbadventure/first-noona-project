@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <link rel="shortcut icon" href="#">
+    <style>
+        * {
+            margin: 5px;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: lightblue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#m1 button:eq(0)").click(function(){
+            $("#m1 .box").animate(
+                {
+                    top : 100, left : 100
+                },
+                1000,
+                "swing",
+                function(){
+                    $(this).text("custom effect 1");
+                }
+            )
+            }
+            )
+
+            $("#m1 button:eq(1)").click(function(){
+                $("#m1 .box").animate({width : "400px"}, "fast","swing");
+            })
+
+            $("#m1 button:eq(2)").click(function(){
+                $("#m1 .box").stop();
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <button>Custom Effect 1</button>
+        <button>Custom Effect 2</button>
+        <button>Custom Effect Stop</button>
+        <div class="box">
+            내용
+        </div>
+    </div>
+</body>
+</html>

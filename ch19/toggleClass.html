@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+          $("#btn").click(function(){
+            $("#m1").toggleClass("bg");
+            $("#m2 > div").toggleClass("bg");
+          });
+        });
+
+    </script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background: pink;
+            border-radius: 50px;
+        }
+        .bg {
+            background: blue;
+        }
+        #btn {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="m1" class="box bg">타이틀</div>
+    <div id="m2">
+        <div class="box bg">HTML</div>
+        <div class="box bg">CSS</div>
+        <div class="box bg">JavaScript</div>
+    </div>
+    <div>
+        <button id = "btn">토글</button>
+    </div>
+</body>
+</body>
+</html>

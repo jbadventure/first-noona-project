@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+    <script>
+        var map = new Map();
+        map.set("html",1);
+        map.set("css",2);
+        map.set("javascript",3);
+
+        document.write(map.get("css") + "<br>");
+
+        for(var i of map.keys()){
+            document.write(i + "<br>");
+        }
+
+        for(var i of map.values()){
+            document.write(i + "<br>");
+        }
+
+        for(var i of map.entries()){
+            document.write(i + "<br>");
+        }
+
+        map.delete("css");
+        document.write(map + "<br>");
+        map.clear();
+        document.write(map + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

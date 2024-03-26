@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+    <script>
+        var hello1 = "Hello";
+        document.write(hello1.length + "<br>");
+
+        var str = "javascript";
+        document.write(str.charAt(0) + "<br>");
+
+        var str = "javascript";
+        document.write(str.indexOf("j") + "<br>");
+        document.write(str.lastIndexOf("i") + "<br>");
+
+        var str = "javascript";
+        document.write(str.includes("t") + "<br>");
+
+        var str = "http://google.com";
+        document.write(str.substring(0,4) + "<br>");
+        document.write(str.substring(7) + "<br>");
+
+        str = "javascript_jQuery";
+        var division = str.split("_");
+        document.write(division[0] + ", " + division[1] + "<br>");
+
+        var str = "m_out.gif";
+        document.write(str.replace("out","over") + "<br>");
+
+        var str1 = "nav";
+        var str2 = "_bg";
+        document.write(str1.concat(str2) + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

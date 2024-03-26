@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array3</title>
+    <script>
+        var arr = new Array(1,2,3);
+        for(var i of arr){
+            document.write(i + "<br>");
+        }
+
+        // forEach()
+        var sum = 0;
+        arr.forEach(function(value, index, array){
+            document.write("value : " + value + "<br>");
+            document.write("index : " + index + "<br>");
+            document.write("array : " + array + "<br>");
+
+            sum += value;
+        });
+
+        document.write("sum : " + sum + "<br>");
+
+        // map()
+        var otherArr = arr.map(function(value, index, array){
+            return value * 10;
+        });
+
+        document.write(otherArr + "<br>");
+
+        // filter()
+        var arr2 = ['javascript', 10, 20, 'html'];
+        var otherArr2 = arr2.filter(function(value, index, array){
+            return typeof(value) == 'number';
+        });
+
+        document.write(otherArr2 + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
